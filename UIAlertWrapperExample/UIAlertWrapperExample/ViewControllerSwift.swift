@@ -18,9 +18,9 @@ class ViewControllerSwift: UIViewController {
             { (buttonIndex) -> () in
                 switch buttonIndex {
                 case 0:
-                    println("Cancel Button pressed")
+                    println("Cancel pressed")
                 case 1:
-                    println("OK Button pressed")
+                    println("OK pressed")
                 default:
                     println("No Idea what was pressed")
                 }
@@ -36,7 +36,7 @@ class ViewControllerSwift: UIViewController {
             { (buttonIndex) -> () in
                 switch buttonIndex {
                 case 0:
-                    println("Cancel Button pressed")
+                    println("Cancel pressed")
                 case 1:
                     println("Do Stuff pressed")
                 default:
@@ -54,7 +54,7 @@ class ViewControllerSwift: UIViewController {
             { (buttonIndex) -> () in
                 switch buttonIndex {
                 case 0:
-                    println("Cancel Button pressed")
+                    println("Cancel pressed")
                 case 1:
                     println("Delete pressed")
                 case 2:

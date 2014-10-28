@@ -37,8 +37,9 @@ UIAlertWrapper is a wrapper around UIAlertView/UIActionSheet and UIAlertControll
 */
 class UIAlertWrapper : NSObject {
     private class func topViewController () -> UIViewController {
-        let rootViewController = UIApplication.sharedApplication().keyWindow.rootViewController!
-        return UIAlertWrapper.topVisibleViewController(rootViewController)
+        let rootViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+        assert(rootViewController != nil, "App has no keyWindow, cannot present Alert/Action Sheet.")
+        return UIAlertWrapper.topVisibleViewController(rootViewController!)
     }
     
     private class func topVisibleViewController(viewController: UIViewController) -> UIViewController {

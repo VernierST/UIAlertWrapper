@@ -21,10 +21,10 @@
                      clickedButtonAtIndex:^(NSInteger buttonIndex) {
                          switch (buttonIndex) {
                              case 0:
-                                 NSLog(@"Cancel Button pressed");
+                                 NSLog(@"Cancel pressed");
                                  break;
                              case 1:
-                                 NSLog(@"OK Button pressed");
+                                 NSLog(@"OK pressed");
                                  break;
                              default:
                                  NSLog(@"No Idea what was pressed");
@@ -42,7 +42,7 @@
                            clickedButtonAtIndex:^(NSInteger buttonIndex) {
                                switch (buttonIndex) {
                                    case 0:
-                                       NSLog(@"Cancel Button pressed");
+                                       NSLog(@"Cancel pressed");
                                        break;
                                    case 1:
                                        NSLog(@"Do Stuff pressed");
@@ -63,7 +63,7 @@
                            clickedButtonAtIndex:^(NSInteger buttonIndex) {
                                switch (buttonIndex) {
                                    case 0:
-                                       NSLog(@"Cancel Button pressed");
+                                       NSLog(@"Cancel pressed");
                                        break;
                                    case 1:
                                        NSLog(@"Delete pressed");
