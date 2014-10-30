@@ -55,6 +55,16 @@ class UIAlertWrapper : NSObject {
         return viewController
     }
     
+    /**
+    Initializes and presents a new Action Sheet from a Bar Button Item on iPad or modally on iPhone
+    
+    :param: title The title of the Action Sheet
+    :param: cancelButtonTitle The cancel button title
+    :param: destructiveButtonTitle The destructive button title
+    :param: otherButtonTitles An array of other button titles
+    :param: barButtonItem The Bar Button Item to present from
+    :param: clickedButtonAtIndex A closure that returns the buttonIndex of the button that was pressed. An index of 0 is always the cancel button or tapping outside of the popover on iPad.
+    */
     class func presentActionSheet(#title: String?,
         cancelButtonTitle: String,
         destructiveButtonTitle: String?,
@@ -70,6 +80,16 @@ class UIAlertWrapper : NSObject {
                 clickedButtonAtIndex: clickedButtonAtIndex)
     }
     
+    /**
+    Initializes and presents a new Action Sheet from a Frame on iPad or modally on iPhone
+    
+    :param: title The title of the Action Sheet
+    :param: cancelButtonTitle The cancel button title
+    :param: destructiveButtonTitle The destructive button title
+    :param: otherButtonTitles An array of other button titles
+    :param: frame The Frame to present from
+    :param: clickedButtonAtIndex A closure that returns the buttonIndex of the button that was pressed. An index of 0 is always the cancel button or tapping outside of the popover on iPad.
+    */
     class func presentActionSheet(#title: String?,
         cancelButtonTitle: String,
         destructiveButtonTitle:String?,
@@ -175,6 +195,15 @@ class UIAlertWrapper : NSObject {
             }
     }
     
+    /**
+    Initializes and presents a new Alert
+    
+    :param: title The title of the Alert
+    :param: message The message of the Alert
+    :param: cancelButtonTitle The cancel button title
+    :param: otherButtonTitles An array of other button titles
+    :param: clickedButtonAtIndex A closure that returns the buttonIndex of the button that was pressed. An index of 0 is always the cancel button.
+    */
     class func presentAlert(#title: String,
         message: String,
         cancelButtonTitle: String,
