@@ -44,17 +44,17 @@ class UIAlertWrapper : NSObject {
     
     private class func topVisibleViewController(viewController: UIViewController) -> UIViewController {
         if viewController is UITabBarController {
-            return UIAlertWrapper.topVisibleViewController((viewController as UITabBarController).selectedViewController!)
+            return UIAlertWrapper.topVisibleViewController((viewController as! UITabBarController).selectedViewController!)
         } else if viewController is UINavigationController {
-            return UIAlertWrapper.topVisibleViewController((viewController as UINavigationController).visibleViewController)
+            return UIAlertWrapper.topVisibleViewController((viewController as! UINavigationController).visibleViewController)
         } else if viewController.presentedViewController != nil {
             return UIAlertWrapper.topVisibleViewController(viewController.presentedViewController!)
         } else if viewController.childViewControllers.count > 0 {
-            return UIAlertWrapper.topVisibleViewController(viewController.childViewControllers.last as UIViewController)
+            return UIAlertWrapper.topVisibleViewController(viewController.childViewControllers.last as! UIViewController)
         }
         return viewController
     }
-    
+  
     /**
     Initializes and presents a new Action Sheet from a Bar Button Item on iPad or modally on iPhone
     
