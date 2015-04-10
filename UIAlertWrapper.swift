@@ -18,12 +18,12 @@ private let useAlertController = floor(NSFoundationVersionNumber) > NSFoundation
 private let alertDelegate = AlertDelegate()
 private var clickedButtonAtIndexBlock:((Int) -> ())?
 
-private class AlertDelegate : NSObject, UIAlertViewDelegate, UIActionSheetDelegate {
-    func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
+class AlertDelegate : NSObject, UIAlertViewDelegate, UIActionSheetDelegate {
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
         clickedButtonAtIndexBlock!(buttonIndex)
     }
     
-    func actionSheet(actionSheet: UIActionSheet!, clickedButtonAtIndex buttonIndex: Int) {
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
         if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
             clickedButtonAtIndexBlock!(buttonIndex + 1)
         } else {
