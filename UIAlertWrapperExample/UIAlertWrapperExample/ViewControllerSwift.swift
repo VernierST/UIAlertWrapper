@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewControllerSwift: UIViewController {
-    
+  
     @IBAction func alertViewPresent(sender: UIButton) {
         UIAlertWrapper.presentAlert(title: "Alert Title",
             message: "Alert message",
@@ -18,11 +18,11 @@ class ViewControllerSwift: UIViewController {
             { (buttonIndex) -> () in
                 switch buttonIndex {
                 case 0:
-                    println("Cancel pressed")
+                    print("Cancel pressed")
                 case 1:
-                    println("OK pressed")
+                    print("OK pressed")
                 default:
-                    println("No Idea what was pressed")
+                    print("No Idea what was pressed")
                 }
         }
     }
@@ -36,11 +36,11 @@ class ViewControllerSwift: UIViewController {
             { (buttonIndex) -> () in
                 switch buttonIndex {
                 case 0:
-                    println("Cancel pressed")
+                    print("Cancel pressed")
                 case 1:
-                    println("Do Stuff pressed")
+                    print("Do Stuff pressed")
                 default:
-                    println("No Idea what was pressed")
+                    print("No Idea what was pressed")
                 }
         }
     }
@@ -54,13 +54,13 @@ class ViewControllerSwift: UIViewController {
             { (buttonIndex) -> () in
                 switch buttonIndex {
                 case 0:
-                    println("Cancel pressed")
+                    print("Cancel pressed")
                 case 1:
-                    println("Delete pressed")
+                    print("Delete pressed")
                 case 2:
-                    println("Do Stuff pressed")
+                    print("Do Stuff pressed")
                 default:
-                    println("No Idea what was pressed")
+                    print("No Idea what was pressed")
                 }
         }
     }
